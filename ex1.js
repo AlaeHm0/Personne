@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./ex1.css";
 export default function Gerer(){
     const [tableP, setTableP] = useState([])
     const [nom, setNom] = useState('')
@@ -64,7 +65,7 @@ export default function Gerer(){
             (tableP.length > 0) && (
                 <div>
                     <h1 className='text-center mt-3'>Tableau des Personnes</h1>
-                    <table className='table table-dark mt-3'><thead>
+                    <table className='table text-center table-dark mt-3 '><thead className='table-primary'>
                         <tr><th>ID</th><th>Nom</th><th>Prenom</th><th>Mot de pass</th><th>Actions</th></tr></thead><tbody>
                         {tableP.map((p,i)=>(
                             <tr key={i}>
